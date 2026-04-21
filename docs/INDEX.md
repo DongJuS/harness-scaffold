@@ -10,6 +10,7 @@ and deliberation logs. Each subdirectory holds a specific type of record.
 - `./decisions/` — Architecture Decision Records (ADRs) tracing why choices were made
 - `./journals/` — AI work journal entries recording session tasks, changes, and learnings
 - `./deliberations/` — AI reasoning traces capturing thought process behind non-trivial choices
+- `./TIMELINE.md` — All entries across all log types in reverse chronological order (auto-generated)
 
 ## Dependencies
 

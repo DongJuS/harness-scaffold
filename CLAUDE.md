@@ -61,6 +61,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/new-file.sh <path> "<desc>"` | Create a new file with header comment and update INDEX.md |
 | `scripts/new-journal.sh "<objective>"` | Create a new journal entry with auto-incremented ID |
 | `scripts/new-deliberation.sh "<question>"` | Create a new deliberation log with auto-incremented ID |
+| `scripts/update-timeline.sh` | Regenerate docs/TIMELINE.md from all log entries |
 
 ## Workflow
 
@@ -107,6 +108,11 @@ or architectural impact), create a deliberation log before proceeding:
 - Fill in all fields: constraints, step-by-step thinking, conclusion, confidence level
 - Deliberation entries live in `docs/deliberations/` with IDs like DELIB-001, DELIB-002, etc.
 - Link to related ADRs and journal entries where applicable
+
+## Timeline
+
+After creating any log entry (ADR, journal, or deliberation), run `scripts/update-timeline.sh`
+to regenerate `docs/TIMELINE.md` with the new entry in chronological order.
 
 ## Conventions Summary
 
