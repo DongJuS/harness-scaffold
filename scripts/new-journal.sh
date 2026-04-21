@@ -50,6 +50,10 @@ JOURNAL-${PADDED_ID}
 
 ${TODAY}
 
+## Background
+
+_Write as if the reader has never seen this project before. State the full context: what project, what problem, what has been tried, why this matters._
+
 ## Objective
 
 ${OBJECTIVE}
@@ -74,6 +78,10 @@ ${OBJECTIVE}
 ## Open Questions
 
 - _Unresolved items for human review, or "None" if all resolved._
+
+## Glossary References
+
+_List any project-specific terms used in this document with definitions or links to [docs/GLOSSARY.md](../GLOSSARY.md)._
 EOF
 
 echo "Created: $FILEPATH"

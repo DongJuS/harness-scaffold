@@ -8,6 +8,10 @@ DELIB-{ID}
 
 {YYYY-MM-DD}
 
+## Background
+
+_Write as if the reader has never seen this project before. State the full context: what project, what problem, what has been tried, why this matters._
+
 ## Related Decision
 
 _Link to ADR if applicable, e.g. `../decisions/ADR-001.md`, or "None"._
@@ -40,3 +44,7 @@ _Final judgment reached after reasoning._
 **Level:** high | medium | low
 
 _Explanation of why this confidence level was chosen._
+
+## Glossary References
+
+_List any project-specific terms used in this document with definitions or links to [docs/GLOSSARY.md](../GLOSSARY.md)._
