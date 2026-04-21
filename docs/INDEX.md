@@ -8,6 +8,7 @@ and deliberation logs. Each subdirectory holds a specific type of record.
 ## Files
 
 - `./decisions/` — Architecture Decision Records (ADRs) tracing why choices were made
+- `./journals/` — AI work journal entries recording session tasks, changes, and learnings
 
 ## Dependencies
 

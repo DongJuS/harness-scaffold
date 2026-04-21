@@ -59,6 +59,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/create-index.sh <dir>` | Generate INDEX.md skeleton for a directory |
 | `scripts/new-repo.sh <name> "<desc>"` | Scaffold a new sub-repo with INDEX.md and register it |
 | `scripts/new-file.sh <path> "<desc>"` | Create a new file with header comment and update INDEX.md |
+| `scripts/new-journal.sh "<objective>"` | Create a new journal entry with auto-incremented ID |
 
 ## Workflow
 
@@ -87,6 +88,14 @@ Before committing any changes:
 │   └── new-file.sh      — File creator with INDEX.md update
 └── templates/           — Reusable templates (INDEX.md, etc.)
 ```
+
+## AI Work Journals
+
+After completing any significant work session, create a journal entry before finishing:
+
+- Use `scripts/new-journal.sh "<objective>"` to generate a new entry
+- Fill in all fields: tasks performed, files changed, problems, solutions, open questions
+- Journal entries live in `docs/journals/` with IDs like JOURNAL-001, JOURNAL-002, etc.
 
 ## Conventions Summary
 
