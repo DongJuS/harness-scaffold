@@ -12,6 +12,10 @@
 
 {ADR ID that replaced this, or 'active'}
 
+## Depends On
+
+{list of ADR IDs this decision assumes or builds upon, or 'none' if standalone}
+
 ## Date
 
 {YYYY-MM-DD}
