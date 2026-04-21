@@ -108,7 +108,7 @@ else
 fi
 echo ""
 
-echo "[4/4] Running conflict detection..."
+echo "[4/5] Running conflict detection..."
 
 if [[ -x "$SCRIPT_DIR/check-conflicts.sh" ]]; then
   if "$SCRIPT_DIR/check-conflicts.sh" > /dev/null 2>&1; then
@@ -118,6 +118,19 @@ if [[ -x "$SCRIPT_DIR/check-conflicts.sh" ]]; then
   fi
 else
   warn "scripts/check-conflicts.sh not found or not executable — skipping"
+fi
+echo ""
+
+echo "[5/5] Running writing quality check..."
+
+if [[ -x "$SCRIPT_DIR/check-writing.sh" ]]; then
+  if "$SCRIPT_DIR/check-writing.sh" > /dev/null 2>&1; then
+    pass "No writing quality errors detected"
+  else
+    warn "Writing quality issues found — run scripts/check-writing.sh for details"
+  fi
+else
+  warn "scripts/check-writing.sh not found or not executable — skipping"
 fi
 echo ""
 

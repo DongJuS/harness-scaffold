@@ -16,6 +16,10 @@
 
 {YYYY-MM-DD}
 
+## Background
+
+_Write as if the reader has never seen this project before. State the full context: what project, what problem, what has been tried, why this matters._
+
 ## Context
 
 _What problem or situation prompted this decision? Describe the forces at play._
@@ -49,3 +53,7 @@ _Why did this option win over the alternatives?_
 ### Costs
 
 - ...
+
+## Glossary References
+
+_List any project-specific terms used in this document with definitions or links to [docs/GLOSSARY.md](../GLOSSARY.md)._

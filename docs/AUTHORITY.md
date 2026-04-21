@@ -29,6 +29,8 @@ find conflicting information in another document, the document listed here wins.
 | AI agent rules | `../CLAUDE.md` — All rules AI agents must follow when working in this repo | 2026-04-22 |
 | Project timeline | `./TIMELINE.md` — Chronological view of all log entries (auto-generated) | 2026-04-22 |
 | Validation rules | `../scripts/validate.sh` — Enforces structural rules: line counts, INDEX.md, registry | 2026-04-22 |
+| Writing standard | `./WRITING-STANDARD.md` — Self-contained writing rules all documents must follow | 2026-04-22 |
+| Project glossary | `./GLOSSARY.md` — Alphabetical glossary of all project-specific terms and abbreviations | 2026-04-22 |
 
 ## How to Update This Table
 

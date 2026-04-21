@@ -64,6 +64,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/update-timeline.sh` | Regenerate docs/TIMELINE.md from all log entries |
 | `scripts/supersede-decision.sh OLD NEW` | Deprecate an ADR and link it to its replacement |
 | `scripts/check-conflicts.sh` | Detect document conflicts, orphaned refs, deprecated authorities |
+| `scripts/check-writing.sh` | Check documents for self-contained writing quality violations |
 
 ## Workflow
 
@@ -134,6 +135,14 @@ Before starting any work session, run `scripts/check-conflicts.sh`. If critical
 conflicts exist, resolve them before proceeding with new work. When creating a
 new decision that touches a topic already covered by an existing decision, you
 MUST use `scripts/supersede-decision.sh` — never create a parallel competing decision.
+
+## Writing Standard
+
+Every document you write must pass `scripts/check-writing.sh`. Write every sentence
+as if the reader just opened this one file with zero context about the project. If
+you reference a concept, define it. If you reference a decision, restate it. If you
+reference a file, explain what it contains. See `docs/WRITING-STANDARD.md` for full
+rules and `docs/GLOSSARY.md` for project term definitions.
 
 ## Conventions Summary
 
