@@ -20,6 +20,9 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./validate-handoff.sh` — Validates HANDOFF.md for completeness (all fields filled), freshness, self-contained language, and valid file references
 - `./rollback-decision.sh` — Cascade-deprecates an ADR and all ADRs that depend on it (direct + transitive), updates AUTHORITY.md and TIMELINE.md, creates a journal entry
 - `./show-decision-tree.sh` — Visualizes the dependency graph of all active ADRs as an ASCII tree to assess blast radius before changes
+- `./session-start.sh` — Registers a new session in sessions/ACTIVE.md and checks for conflicts with other active sessions
+- `./session-claim.sh` — Claims a file or directory for a session in sessions/CLAIMS.md, preventing simultaneous edits
+- `./session-end.sh` — Ends a session by releasing all claims and marking status as completed in sessions/ACTIVE.md
 
 ## Dependencies
 
