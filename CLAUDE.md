@@ -63,6 +63,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/new-deliberation.sh "<question>"` | Create a new deliberation log with auto-incremented ID |
 | `scripts/update-timeline.sh` | Regenerate docs/TIMELINE.md from all log entries |
 | `scripts/supersede-decision.sh OLD NEW` | Deprecate an ADR and link it to its replacement |
+| `scripts/check-conflicts.sh` | Detect document conflicts, orphaned refs, deprecated authorities |
 
 ## Workflow
 
@@ -126,6 +127,13 @@ or is marked deprecated, do not follow it.
 Never follow a decision marked deprecated. Always follow the supersede chain to
 the latest active decision. Use `scripts/supersede-decision.sh OLD_ID NEW_ID` to
 deprecate an ADR — it updates both ADRs, AUTHORITY.md, and TIMELINE.md automatically.
+
+## Conflict Detection
+
+Before starting any work session, run `scripts/check-conflicts.sh`. If critical
+conflicts exist, resolve them before proceeding with new work. When creating a
+new decision that touches a topic already covered by an existing decision, you
+MUST use `scripts/supersede-decision.sh` — never create a parallel competing decision.
 
 ## Conventions Summary
 

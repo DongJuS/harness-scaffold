@@ -19,7 +19,7 @@ fail() { echo "  ✗ $1"; ERRORS=$((ERRORS + 1)); }
 echo "=== HarnessScaffold Validation ==="
 echo ""
 
-echo "[1/3] Checking file line counts (max $MAX_LINES lines)..."
+echo "[1/4] Checking file line counts (max $MAX_LINES lines)..."
 
 OVER_LIMIT=0
 while IFS= read -r file; do
@@ -48,7 +48,7 @@ if [[ "$OVER_LIMIT" -eq 0 ]]; then
 fi
 echo ""
 
-echo "[2/3] Checking INDEX.md presence in directories..."
+echo "[2/4] Checking INDEX.md presence in directories..."
 
 MISSING_INDEX=0
 while IFS= read -r dir; do
@@ -87,7 +87,7 @@ if [[ "$MISSING_INDEX" -eq 0 ]]; then
 fi
 echo ""
 
-echo "[3/3] Checking REGISTRY.md completeness..."
+echo "[3/4] Checking REGISTRY.md completeness..."
 
 if [[ ! -f "$REGISTRY" ]]; then
   fail "REGISTRY.md not found"
@@ -105,6 +105,19 @@ else
       fail "repos/$repo_name/ NOT registered in REGISTRY.md"
     fi
   done
+fi
+echo ""
+
+echo "[4/4] Running conflict detection..."
+
+if [[ -x "$SCRIPT_DIR/check-conflicts.sh" ]]; then
+  if "$SCRIPT_DIR/check-conflicts.sh" > /dev/null 2>&1; then
+    pass "No critical conflicts detected"
+  else
+    fail "Critical conflicts found — run scripts/check-conflicts.sh for details"
+  fi
+else
+  warn "scripts/check-conflicts.sh not found or not executable — skipping"
 fi
 echo ""
 
