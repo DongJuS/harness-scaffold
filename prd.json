@@ -308,7 +308,7 @@
         "All files under 200 lines"
       ],
       "priority": 20,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
@@ -329,7 +329,7 @@
         "All role files under 200 lines"
       ],
       "priority": 21,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
