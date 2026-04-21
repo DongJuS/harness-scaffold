@@ -17,6 +17,7 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./supersede-decision.sh` — Deprecates an old ADR and links it to its replacement, updating AUTHORITY.md and TIMELINE.md
 - `./check-conflicts.sh` — Scans for document conflicts: duplicate topics, deprecated authorities, orphaned references
 - `./check-writing.sh` — Checks documents for self-contained writing quality: banned phrases, bare links, undefined acronyms, missing Background
+- `./validate-handoff.sh` — Validates HANDOFF.md for completeness (all fields filled), freshness, self-contained language, and valid file references
 
 ## Dependencies
 
