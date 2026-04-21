@@ -1,0 +1,28 @@
+## Codebase Patterns
+- All scripts use `set -euo pipefail` and portable bash (macOS BSD + Linux)
+- Scripts resolve `ROOT_DIR` via `SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"` then `ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"`
+- Markdown tables with pipe `|` delimiters break `sed` substitutions — use `awk` or temp files instead
+- Placeholder rows like `_(no active sessions)_` are used in empty tables and replaced when first real entry is added
+- INDEX.md files follow the format: Purpose, Files, Dependencies, Related sections
+- All files must stay under 200 lines — run `scripts/validate.sh` before committing
+- Auto-increment IDs by scanning existing files (e.g., ADR-001, JOURNAL-001)
+
+---
+
+## 2026-04-22 - US-019
+- What was implemented: Multi-session coordination system with three scripts and two registry files
+- Files changed:
+  - `sessions/INDEX.md` — Directory index for the sessions coordination system
+  - `sessions/ACTIVE.md` — Live registry of running sessions with status tracking
+  - `sessions/CLAIMS.md` — File-level lock registry preventing simultaneous edits
+  - `scripts/session-start.sh` — Registers a session, generates unique ID, checks for conflicts
+  - `scripts/session-claim.sh` — Claims file/directory ownership, detects overlaps, enforces active session check
+  - `scripts/session-end.sh` — Releases all claims, marks session completed, reminds about HANDOFF.md
+  - `scripts/INDEX.md` — Updated with three new script entries
+  - `prd.json` — Marked US-019 as passes: true
+- **Learnings for future iterations:**
+  - Pipe `|` characters in markdown table rows break sed substitution commands — always use awk or temp file approach for table row manipulation
+  - The `xargs` command is used to trim whitespace when parsing pipe-delimited table fields
+  - Session IDs follow format: SESSION-<name>-<YYYYMMDD-HHMMSS>
+  - When rebuilding a file after removing lines (e.g., releasing claims), use a heredoc to restore the full template rather than trying to patch individual lines
+---
