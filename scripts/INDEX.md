@@ -25,6 +25,7 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./session-end.sh` — Ends a session by releasing all claims and marking status as completed in sessions/ACTIVE.md
 - `./session-broadcast.sh` — Appends a change entry to sessions/CHANGELOG.md, notifying other sessions of significant changes
 - `./session-sync.sh` — Shows CHANGELOG.md entries from other sessions since last sync, highlighting conflicts with claimed paths
+- `./activate-roles.sh` — Looks up roles/ROUTING.md for a task type and outputs activated role files with combined review checklist
 
 ## Dependencies
 
