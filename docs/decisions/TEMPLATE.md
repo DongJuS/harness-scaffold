@@ -4,6 +4,14 @@
 
 {proposed|accepted|deprecated}
 
+## Supersedes
+
+{ADR ID this replaces, or 'none'}
+
+## Superseded By
+
+{ADR ID that replaced this, or 'active'}
+
 ## Date
 
 {YYYY-MM-DD}

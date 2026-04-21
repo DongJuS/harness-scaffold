@@ -46,6 +46,14 @@ cat > "$FILEPATH" << EOF
 
 proposed
 
+## Supersedes
+
+none
+
+## Superseded By
+
+active
+
 ## Date
 
 ${TODAY}
