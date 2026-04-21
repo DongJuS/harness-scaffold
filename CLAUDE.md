@@ -81,6 +81,7 @@ Before committing any changes:
 ./
 ├── REGISTRY.md          — Master list of all sub-repos
 ├── CLAUDE.md            — This file: AI agent rules
+├── START-HERE.md        — Context loading guide: which files to read per task type
 ├── setup.sh             — Clone-and-initialize automation
 ├── repos/               — All sub-repos live here
 │   ├── core/            — Shared types, utils, constants
@@ -143,6 +144,12 @@ as if the reader just opened this one file with zero context about the project. 
 you reference a concept, define it. If you reference a decision, restate it. If you
 reference a file, explain what it contains. See `docs/WRITING-STANDARD.md` for full
 rules and `docs/GLOSSARY.md` for project term definitions.
+
+## Context Loading
+
+At the start of every session, determine your task type and follow the reading
+list in START-HERE.md. Do not read documents outside the list unless a document
+you read explicitly directs you to another.
 
 ## Conventions Summary
 
