@@ -23,6 +23,8 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./session-start.sh` — Registers a new session in sessions/ACTIVE.md and checks for conflicts with other active sessions
 - `./session-claim.sh` — Claims a file or directory for a session in sessions/CLAIMS.md, preventing simultaneous edits
 - `./session-end.sh` — Ends a session by releasing all claims and marking status as completed in sessions/ACTIVE.md
+- `./session-broadcast.sh` — Appends a change entry to sessions/CHANGELOG.md, notifying other sessions of significant changes
+- `./session-sync.sh` — Shows CHANGELOG.md entries from other sessions since last sync, highlighting conflicts with claimed paths
 
 ## Dependencies
 
