@@ -14,6 +14,7 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./new-journal.sh` — Generates a new journal entry from template with auto-incremented ID
 - `./new-deliberation.sh` — Generates a new deliberation log from template with auto-incremented ID
 - `./update-timeline.sh` — Scans all log directories and regenerates docs/TIMELINE.md
+- `./supersede-decision.sh` — Deprecates an old ADR and links it to its replacement, updating AUTHORITY.md and TIMELINE.md
 
 ## Dependencies
 

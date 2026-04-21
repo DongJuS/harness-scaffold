@@ -62,6 +62,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/new-journal.sh "<objective>"` | Create a new journal entry with auto-incremented ID |
 | `scripts/new-deliberation.sh "<question>"` | Create a new deliberation log with auto-incremented ID |
 | `scripts/update-timeline.sh` | Regenerate docs/TIMELINE.md from all log entries |
+| `scripts/supersede-decision.sh OLD NEW` | Deprecate an ADR and link it to its replacement |
 
 ## Workflow
 
@@ -119,6 +120,12 @@ to regenerate `docs/TIMELINE.md` with the new entry in chronological order.
 Before acting on information from any document, check `docs/AUTHORITY.md` to confirm
 that document is the current authority for that topic. If the document is not listed
 or is marked deprecated, do not follow it.
+
+## Decision Supersede Chain
+
+Never follow a decision marked deprecated. Always follow the supersede chain to
+the latest active decision. Use `scripts/supersede-decision.sh OLD_ID NEW_ID` to
+deprecate an ADR — it updates both ADRs, AUTHORITY.md, and TIMELINE.md automatically.
 
 ## Conventions Summary
 
