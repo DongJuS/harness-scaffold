@@ -26,3 +26,22 @@
   - Session IDs follow format: SESSION-<name>-<YYYYMMDD-HHMMSS>
   - When rebuilding a file after removing lines (e.g., releasing claims), use a heredoc to restore the full template rather than trying to patch individual lines
 ---
+
+## 2026-04-22 - US-021
+- What was implemented: Role profiles for solo full-stack developer — 8 role files plus directory INDEX.md
+- Files changed:
+  - `roles/INDEX.md` — Directory index listing all 8 role files with descriptions
+  - `roles/product.md` — Product Owner perspective: user value, scope, success metrics
+  - `roles/architect.md` — Architect perspective: system design, scalability, convention compliance
+  - `roles/backend.md` — Backend Developer perspective: API design, data correctness, error handling
+  - `roles/frontend.md` — Frontend Developer perspective: UI/UX, accessibility, state management
+  - `roles/data.md` — Data Engineer / AI Scientist perspective: pipelines, ML rigor, data quality
+  - `roles/devops.md` — DevOps perspective: CI/CD, deployment safety, monitoring, disaster recovery
+  - `roles/security.md` — Security perspective: authentication, input sanitization, dependency audit
+  - `roles/finance.md` — Finance perspective: cloud costs, usage limits, vendor lock-in
+  - `prd.json` — Marked US-021 as passes: true
+- **Learnings for future iterations:**
+  - All role files follow a consistent 5-section structure: Background, Perspective, When to Activate, Review Checklist, Red Flags
+  - Background sections must explain the HarnessScaffold context so each file is self-contained per the writing standard
+  - Role checklists are numbered questions; red flags are bullet points — this distinction matters for future scripts that parse them
+---
