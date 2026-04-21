@@ -15,6 +15,7 @@ and deliberation logs. Each subdirectory holds a specific type of record.
 - `./CONFLICTS.md` — Auto-generated conflict report listing detected issues with severity and resolution suggestions
 - `./WRITING-STANDARD.md` — Self-contained writing rules that all documents must follow
 - `./GLOSSARY.md` — Project-wide glossary of terms, conventions, and abbreviations
+- `./reviews/` — Role-based review records with per-role checklists, issue tracking, and verdicts
 
 ## Dependencies
 

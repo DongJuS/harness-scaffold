@@ -26,6 +26,7 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./session-broadcast.sh` — Appends a change entry to sessions/CHANGELOG.md, notifying other sessions of significant changes
 - `./session-sync.sh` — Shows CHANGELOG.md entries from other sessions since last sync, highlighting conflicts with claimed paths
 - `./activate-roles.sh` — Looks up roles/ROUTING.md for a task type and outputs activated role files with combined review checklist
+- `./role-review.sh` — Generates a pre-filled role review file for a task type, or validates a completed review for unresolved critical issues
 
 ## Dependencies
 

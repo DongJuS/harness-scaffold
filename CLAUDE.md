@@ -71,6 +71,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/session-broadcast.sh` | Broadcast a change to sessions/CHANGELOG.md for cross-session sync |
 | `scripts/session-sync.sh` | Show other sessions' changes since last sync, flag conflicts |
 | `scripts/activate-roles.sh <type>` | Look up ROUTING.md, output activated roles and combined checklist |
+| `scripts/role-review.sh` | Generate pre-filled role review, or check completed review for critical issues |
 
 ## Workflow
 
@@ -180,8 +181,9 @@ Every 3-5 task completions, run `scripts/session-sync.sh` to check what others d
 ## Role-Based Review
 
 Before starting any task, run `scripts/activate-roles.sh <task-type>` to determine
-which role profiles to read. After completing work, answer every checklist question
-from all activated roles. See `roles/ROUTING.md` for the full task-to-role matrix.
+which role profiles to read. After completing work, run `scripts/role-review.sh` to
+generate and complete a review. All critical issues must be resolved before marking
+done. Save completed reviews to `docs/reviews/`.
 
 ## Conventions Summary
 
