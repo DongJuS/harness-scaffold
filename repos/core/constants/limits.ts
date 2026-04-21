@@ -10,5 +10,7 @@ export const MAX_SLUG_LENGTH = 80;
 export const MAX_TITLE_LENGTH = 200;
 export const MAX_DESCRIPTION_LENGTH = 2_000;
 
+export const MAX_NAME_LENGTH = 100;
+
 export const RATE_LIMIT_REQUESTS_PER_MINUTE = 60;
 export const RATE_LIMIT_BURST = 10;

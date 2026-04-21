@@ -39,3 +39,9 @@ export interface PaginatedResult<T> {
   pageSize: number;
   totalPages: number;
 }
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: { code: string; message: string };
+}

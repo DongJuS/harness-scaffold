@@ -25,3 +25,9 @@ export function capitalize(input: string): string {
 export function camelToKebab(input: string): string {
   return input.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase();
 }
+
+export function generateId(): string {
+  const timestamp = Date.now().toString(36);
+  const random = Math.random().toString(36).slice(2, 8);
+  return `${timestamp}-${random}`;
+}
