@@ -344,7 +344,7 @@
         "File under 200 lines"
       ],
       "priority": 22,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
@@ -359,7 +359,7 @@
         "All files under 200 lines"
       ],
       "priority": 23,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {
@@ -375,7 +375,7 @@
         "All files under 200 lines"
       ],
       "priority": 24,
-      "passes": false,
+      "passes": true,
       "notes": ""
     },
     {

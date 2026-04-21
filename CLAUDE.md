@@ -72,15 +72,17 @@ Use the provided scripts to maintain consistency:
 | `scripts/session-sync.sh` | Show other sessions' changes since last sync, flag conflicts |
 | `scripts/activate-roles.sh <type>` | Look up ROUTING.md, output activated roles and combined checklist |
 | `scripts/role-review.sh` | Generate pre-filled role review, or check completed review for critical issues |
+| `scripts/verify.sh` | Run verification pipeline: typecheck, lint, test, build per sub-repo |
+| `scripts/verify-report.sh` | Generate verification report in docs/reviews/ from verify.sh output |
 
 ## Workflow
 
 Before committing any changes:
 
-1. Run `scripts/validate.sh` to catch structural issues
-2. Verify all new directories have INDEX.md
-3. Verify all new sub-repos are in REGISTRY.md
-4. Verify no file exceeds 200 lines
+1. Run `scripts/verify.sh` to run the full verification pipeline (structure, conflicts, writing)
+2. If any check fails, fix the code and re-run until all pass
+3. Only proceed to role review after all verification checks pass
+4. Never mark a task complete without a passing verification
 
 ## Directory Structure
 

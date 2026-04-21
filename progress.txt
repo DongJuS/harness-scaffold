@@ -1,4 +1,5 @@
 ## Codebase Patterns
+- macOS lacks `timeout` command — use `gtimeout` (from coreutils) or skip timeout; detect with `command -v`
 - All scripts use `set -euo pipefail` and portable bash (macOS BSD + Linux)
 - Scripts resolve `ROOT_DIR` via `SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"` then `ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"`
 - Markdown tables with pipe `|` delimiters break `sed` substitutions — use `awk` or temp files instead
@@ -44,4 +45,20 @@
   - All role files follow a consistent 5-section structure: Background, Perspective, When to Activate, Review Checklist, Red Flags
   - Background sections must explain the HarnessScaffold context so each file is self-contained per the writing standard
   - Role checklists are numbered questions; red flags are bullet points — this distinction matters for future scripts that parse them
+---
+
+## 2026-04-22 - US-024
+- What was implemented: Automated verification gate with three new files: verify.sh (pipeline runner), verify-config.json (pipeline config), verify-report.sh (report generator)
+- Files changed:
+  - `scripts/verify.sh` — Configurable verification pipeline that detects project type, runs typecheck/lint/test/build, outputs summary
+  - `scripts/verify-config.json` — Pipeline config defining steps per sub-repo and auto-detection rules for package.json, Cargo.toml, go.mod, pyproject.toml
+  - `scripts/verify-report.sh` — Generates VERIFY-NNN reports in docs/reviews/ linked to role reviews
+  - `scripts/INDEX.md` — Updated with three new script entries
+  - `CLAUDE.md` — Added verify.sh and verify-report.sh to automation scripts table; updated Workflow section with verification-first rule
+  - `prd.json` — Marked US-024 as passes: true
+- **Learnings for future iterations:**
+  - macOS does not have `timeout` by default — must check for `timeout` or `gtimeout` (coreutils) and fall back gracefully
+  - `python3 -c` is reliable on macOS for parsing JSON config from bash scripts — no need for `jq` dependency
+  - verify-report.sh modifies docs/reviews/INDEX.md — if running as a test, clean up both the report file and the INDEX.md entry
+  - CLAUDE.md is near the 200-line limit (197 lines) — future additions need to replace or condense existing content
 ---

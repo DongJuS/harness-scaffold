@@ -27,6 +27,9 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./session-sync.sh` — Shows CHANGELOG.md entries from other sessions since last sync, highlighting conflicts with claimed paths
 - `./activate-roles.sh` — Looks up roles/ROUTING.md for a task type and outputs activated role files with combined review checklist
 - `./role-review.sh` — Generates a pre-filled role review file for a task type, or validates a completed review for unresolved critical issues
+- `./verify.sh` — Runs a configurable verification pipeline (typecheck, lint, test, build) per sub-repo, auto-detecting project type
+- `./verify-config.json` — Defines the verification pipeline per sub-repo: which commands to run, in what order, with timeout per step
+- `./verify-report.sh` — Generates a verification report in docs/reviews/ from verify.sh output, linked to a role-based review
 
 ## Dependencies
 

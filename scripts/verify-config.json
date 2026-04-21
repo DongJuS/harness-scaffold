@@ -1,0 +1,35 @@
+{
+  "description": "Verification pipeline configuration for HarnessScaffold sub-repos and root project. Each entry defines which commands to run, in what order, with optional timeout per step.",
+  "defaults": {
+    "timeout": 30
+  },
+  "pipelines": {
+    "_root": {
+      "description": "Root-level structural validation for the entire scaffold",
+      "steps": [
+        { "name": "validate-structure", "command": "scripts/validate.sh", "timeout": 60 },
+        { "name": "check-conflicts", "command": "scripts/check-conflicts.sh", "timeout": 30 },
+        { "name": "check-writing", "command": "scripts/check-writing.sh", "timeout": 30 }
+      ]
+    },
+    "repos/core": {
+      "description": "Core shared utilities and types",
+      "steps": []
+    },
+    "repos/services": {
+      "description": "Business logic modules",
+      "steps": []
+    },
+    "repos/config": {
+      "description": "Environment configuration",
+      "steps": []
+    }
+  },
+  "detectors": {
+    "package.json": { "typecheck": "npx tsc --noEmit", "lint": "npx eslint .", "test": "npm test", "build": "npm run build" },
+    "Cargo.toml":   { "typecheck": "cargo check", "lint": "cargo clippy", "test": "cargo test", "build": "cargo build" },
+    "go.mod":       { "typecheck": "go vet ./...", "lint": "golangci-lint run", "test": "go test ./...", "build": "go build ./..." },
+    "pyproject.toml": { "typecheck": "mypy .", "lint": "ruff check .", "test": "pytest", "build": "python -m build" },
+    "Makefile":     { "build": "make" }
+  }
+}
