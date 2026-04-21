@@ -30,6 +30,7 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./verify.sh` — Runs a configurable verification pipeline (typecheck, lint, test, build) per sub-repo, auto-detecting project type
 - `./verify-config.json` — Defines the verification pipeline per sub-repo: which commands to run, in what order, with timeout per step
 - `./verify-report.sh` — Generates a verification report in docs/reviews/ from verify.sh output, linked to a role-based review
+- `./update-dashboard.sh` — Regenerates DASHBOARD.md at project root from all project sources (prd.json, sessions, timeline, reviews, decisions, health checks)
 
 ## Dependencies
 

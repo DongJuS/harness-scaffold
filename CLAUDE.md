@@ -74,6 +74,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/role-review.sh` | Generate pre-filled role review, or check completed review for critical issues |
 | `scripts/verify.sh` | Run verification pipeline: typecheck, lint, test, build per sub-repo |
 | `scripts/verify-report.sh` | Generate verification report in docs/reviews/ from verify.sh output |
+| `scripts/update-dashboard.sh` | Regenerate DASHBOARD.md from all project sources |
 
 ## Workflow
 
@@ -90,6 +91,7 @@ Before committing any changes:
 ./
 ├── REGISTRY.md          — Master list of all sub-repos
 ├── CLAUDE.md            — This file: AI agent rules
+├── DASHBOARD.md         — Project status dashboard (auto-generated)
 ├── HANDOFF.md           — Session handoff: current state for next agent (overwritten each session)
 ├── START-HERE.md        — Context loading guide: which files to read per task type
 ├── setup.sh             — Clone-and-initialize automation
@@ -187,11 +189,7 @@ which role profiles to read. After completing work, run `scripts/role-review.sh`
 generate and complete a review. All critical issues must be resolved before marking
 done. Save completed reviews to `docs/reviews/`.
 
-## Conventions Summary
+## Dashboard
 
-- Files: max 200 lines, single responsibility
-- Directories: always have INDEX.md
-- Sub-repos: always registered in REGISTRY.md
-- Navigation: INDEX.md first, then act
-- Splitting: when a file grows, split and update INDEX.md
-- Validation: run `scripts/validate.sh` before every commit
+Run `scripts/update-dashboard.sh` after completing any task, review, or session change.
+DASHBOARD.md is auto-generated — never edit it manually.
