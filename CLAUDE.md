@@ -66,6 +66,8 @@ Use the provided scripts to maintain consistency:
 | `scripts/check-conflicts.sh` | Detect document conflicts, orphaned refs, deprecated authorities |
 | `scripts/check-writing.sh` | Check documents for self-contained writing quality violations |
 | `scripts/validate-handoff.sh` | Validate HANDOFF.md for completeness, freshness, and file references |
+| `scripts/rollback-decision.sh ID` | Cascade-deprecate an ADR and all ADRs that depend on it |
+| `scripts/show-decision-tree.sh` | Visualize ADR dependency graph as ASCII tree |
 
 ## Workflow
 
@@ -131,6 +133,12 @@ or is marked deprecated, do not follow it.
 Never follow a decision marked deprecated. Always follow the supersede chain to
 the latest active decision. Use `scripts/supersede-decision.sh OLD_ID NEW_ID` to
 deprecate an ADR — it updates both ADRs, AUTHORITY.md, and TIMELINE.md automatically.
+
+## Cascading Rollback
+
+When adding a new ADR, always fill in the Depends On field honestly. When you
+realize a past decision was wrong, use `scripts/rollback-decision.sh` instead of
+manually deprecating — it finds all downstream decisions you might miss.
 
 ## Conflict Detection
 

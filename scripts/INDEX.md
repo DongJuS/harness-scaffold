@@ -18,6 +18,8 @@ Automation scripts for project scaffolding, validation, and maintenance. All scr
 - `./check-conflicts.sh` — Scans for document conflicts: duplicate topics, deprecated authorities, orphaned references
 - `./check-writing.sh` — Checks documents for self-contained writing quality: banned phrases, bare links, undefined acronyms, missing Background
 - `./validate-handoff.sh` — Validates HANDOFF.md for completeness (all fields filled), freshness, self-contained language, and valid file references
+- `./rollback-decision.sh` — Cascade-deprecates an ADR and all ADRs that depend on it (direct + transitive), updates AUTHORITY.md and TIMELINE.md, creates a journal entry
+- `./show-decision-tree.sh` — Visualizes the dependency graph of all active ADRs as an ASCII tree to assess blast radius before changes
 
 ## Dependencies
 
