@@ -17,6 +17,7 @@ routing matrix in ROUTING.md (created in a later user story).
 - `./devops.md` — DevOps perspective: CI/CD, deployment, infrastructure, monitoring, disaster recovery
 - `./security.md` — Security perspective: authentication, authorization, input validation, compliance
 - `./finance.md` — Finance perspective: cloud costs, API usage, resource optimization, budget tracking
+- `./ROUTING.md` — Task-to-role mapping matrix: which roles review which task types
 
 ## Dependencies
 
@@ -26,4 +27,4 @@ routing matrix in ROUTING.md (created in a later user story).
 ## Related
 
 - `../docs/reviews/` — Review records generated using role checklists (created in a later user story)
-- `../scripts/` — Automation scripts including role activation (created in a later user story)
+- `../scripts/activate-roles.sh` — Automation script that reads ROUTING.md and outputs activated roles with combined checklist

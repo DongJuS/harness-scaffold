@@ -70,6 +70,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/show-decision-tree.sh` | Visualize ADR dependency graph as ASCII tree |
 | `scripts/session-broadcast.sh` | Broadcast a change to sessions/CHANGELOG.md for cross-session sync |
 | `scripts/session-sync.sh` | Show other sessions' changes since last sync, flag conflicts |
+| `scripts/activate-roles.sh <type>` | Look up ROUTING.md, output activated roles and combined checklist |
 
 ## Workflow
 
@@ -175,6 +176,12 @@ you read explicitly directs you to another.
 Before modifying any file, run `scripts/session-claim.sh` to claim it. After
 any significant change, run `scripts/session-broadcast.sh` to notify other sessions.
 Every 3-5 task completions, run `scripts/session-sync.sh` to check what others did.
+
+## Role-Based Review
+
+Before starting any task, run `scripts/activate-roles.sh <task-type>` to determine
+which role profiles to read. After completing work, answer every checklist question
+from all activated roles. See `roles/ROUTING.md` for the full task-to-role matrix.
 
 ## Conventions Summary
 
