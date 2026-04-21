@@ -68,6 +68,8 @@ Use the provided scripts to maintain consistency:
 | `scripts/validate-handoff.sh` | Validate HANDOFF.md for completeness, freshness, and file references |
 | `scripts/rollback-decision.sh ID` | Cascade-deprecate an ADR and all ADRs that depend on it |
 | `scripts/show-decision-tree.sh` | Visualize ADR dependency graph as ASCII tree |
+| `scripts/session-broadcast.sh` | Broadcast a change to sessions/CHANGELOG.md for cross-session sync |
+| `scripts/session-sync.sh` | Show other sessions' changes since last sync, flag conflicts |
 
 ## Workflow
 
@@ -167,6 +169,12 @@ next reader is a completely different AI with no knowledge of what you did.
 At the start of every session, determine your task type and follow the reading
 list in START-HERE.md. Do not read documents outside the list unless a document
 you read explicitly directs you to another.
+
+## Cross-Session Sync
+
+Before modifying any file, run `scripts/session-claim.sh` to claim it. After
+any significant change, run `scripts/session-broadcast.sh` to notify other sessions.
+Every 3-5 task completions, run `scripts/session-sync.sh` to check what others did.
 
 ## Conventions Summary
 
