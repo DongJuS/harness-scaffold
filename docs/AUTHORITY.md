@@ -33,6 +33,7 @@ find conflicting information in another document, the document listed here wins.
 | Project glossary | `./GLOSSARY.md` — Alphabetical glossary of all project-specific terms and abbreviations | 2026-04-22 |
 | Context loading strategy | `../START-HERE.md` — Task-type-specific reading lists for efficient context loading | 2026-04-22 |
 | Session handoff | `../HANDOFF.md` — Living document capturing current project state for next session | 2026-04-22 |
+| Role-based review convention | `./reviews/TEMPLATE.md` — Defines the structure for role-based review records | 2026-04-22 |
 
 ## How to Update This Table
 
