@@ -60,6 +60,7 @@ Use the provided scripts to maintain consistency:
 | `scripts/new-repo.sh <name> "<desc>"` | Scaffold a new sub-repo with INDEX.md and register it |
 | `scripts/new-file.sh <path> "<desc>"` | Create a new file with header comment and update INDEX.md |
 | `scripts/new-journal.sh "<objective>"` | Create a new journal entry with auto-incremented ID |
+| `scripts/new-deliberation.sh "<question>"` | Create a new deliberation log with auto-incremented ID |
 
 ## Workflow
 
@@ -96,6 +97,16 @@ After completing any significant work session, create a journal entry before fin
 - Use `scripts/new-journal.sh "<objective>"` to generate a new entry
 - Fill in all fields: tasks performed, files changed, problems, solutions, open questions
 - Journal entries live in `docs/journals/` with IDs like JOURNAL-001, JOURNAL-002, etc.
+
+## Deliberation Logs
+
+When facing a non-trivial choice (multiple valid approaches, unclear trade-offs,
+or architectural impact), create a deliberation log before proceeding:
+
+- Use `scripts/new-deliberation.sh "<question>"` to generate a new entry
+- Fill in all fields: constraints, step-by-step thinking, conclusion, confidence level
+- Deliberation entries live in `docs/deliberations/` with IDs like DELIB-001, DELIB-002, etc.
+- Link to related ADRs and journal entries where applicable
 
 ## Conventions Summary
 
