@@ -114,6 +114,12 @@ or architectural impact), create a deliberation log before proceeding:
 After creating any log entry (ADR, journal, or deliberation), run `scripts/update-timeline.sh`
 to regenerate `docs/TIMELINE.md` with the new entry in chronological order.
 
+## Authority Registry
+
+Before acting on information from any document, check `docs/AUTHORITY.md` to confirm
+that document is the current authority for that topic. If the document is not listed
+or is marked deprecated, do not follow it.
+
 ## Conventions Summary
 
 - Files: max 200 lines, single responsibility
