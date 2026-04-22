@@ -189,6 +189,18 @@ which role profiles to read. After completing work, run `scripts/role-review.sh`
 generate and complete a review. All critical issues must be resolved before marking
 done. Save completed reviews to `docs/reviews/`.
 
+## External Projects
+
+When this project connects to another project:
+
+- Both projects must register each other in their `REGISTRY.md` External Projects table
+- Use relationship types: `depends-on`, `provides-to`, `shares-with`, or `related`
+- When referencing an external project in any document, always include the project
+  name, its URL/path, and a one-sentence description of what it does
+- Before modifying code that an external project depends on, check that project's
+  REGISTRY.md to understand the dependency direction
+- See START-HERE.md "Connecting to Another Project" for the full reading list
+
 ## Dashboard
 
 Run `scripts/update-dashboard.sh` after completing any task, review, or session change.

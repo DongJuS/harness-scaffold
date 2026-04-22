@@ -78,6 +78,16 @@ Read these files to pick up where the last session left off without re-discoveri
 
 ---
 
+## Connecting to Another Project
+
+Read these files when this project needs to reference or depend on an external project.
+
+1. `./REGISTRY.md` — Check the "External Projects" table to see what external projects are already connected; add the new project here with its URL/path and relationship type
+2. `./CLAUDE.md` — Review the "External Projects" section for rules on how to reference and work with connected projects
+3. The other project's `REGISTRY.md` — Add this project to the other project's External Projects table so the connection is bidirectional
+
+---
+
 ## Creating a New Log Entry (Journal, Deliberation, or ADR)
 
 Read these files before writing any log entry.

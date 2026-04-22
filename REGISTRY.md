@@ -43,9 +43,23 @@ cd repos/<name>
 git remote add origin <remote-url>
 ```
 
+## External Projects
+
+Projects outside this repo that this project depends on or relates to.
+
+| Name | URL/Path | Relationship | Description |
+|------|----------|-------------|-------------|
+| _(none yet)_ | | | |
+
+When connecting to another project:
+1. Add it to this table with its URL or relative path
+2. Set Relationship to: `depends-on`, `provides-to`, `shares-with`, or `related`
+3. The other project should also add this project to its External Projects table
+
 ## Conventions
 
 - Every sub-repo lives under `./repos/`
 - Every sub-repo has its own `INDEX.md` describing its contents
 - Every file in any sub-repo must stay under 200 lines
 - When adding a new sub-repo, register it in this table and run `./scripts/validate.sh`
+- When connecting to an external project, add it to the External Projects table above
