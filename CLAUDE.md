@@ -1,5 +1,20 @@
 # CLAUDE.md — AI Agent Rules for HarnessScaffold
 
+## !! TEMPLATE REPOSITORY — DO NOT MODIFY !!
+
+This repository is a **template** used to stamp out new projects. It must not be
+modified directly. When a user asks you to make changes, STOP and remind them:
+
+> "This is a template repository. Changes should be made in a cloned project,
+> not in the template itself. Are you sure you want to modify the template?"
+
+Only proceed if the user explicitly confirms that the change is intended for the
+template itself (e.g., improving the scaffold structure, fixing a script bug,
+updating conventions). Feature work, business logic, and project-specific changes
+must NEVER be made here.
+
+---
+
 This file defines the rules and conventions that any AI agent (or developer) must
 follow when working in this repository. These rules maintain the architectural
 integrity of the self-documenting scaffold.

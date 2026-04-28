@@ -1,5 +1,11 @@
 # HarnessScaffold
 
+> **DO NOT MODIFY THIS REPOSITORY DIRECTLY.**
+> This is a **template repository** — its sole purpose is to be cloned/copied to create new projects.
+> All changes should be made in the cloned project, not here.
+> If you believe the template itself needs improvement, make sure you understand this purpose first
+> and confirm that the change is intended for the template, not for a specific project.
+
 A self-documenting, AI-agent-ready repository template for solo full-stack developers.
 
 ## Philosophy
