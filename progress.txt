@@ -1,4 +1,0 @@
-## Codebase Patterns
-- (Add reusable patterns here as you discover them during development)
-
----
