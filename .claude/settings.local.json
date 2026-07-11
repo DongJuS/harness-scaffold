@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:channel.io)",
+      "WebFetch(domain:github.com)",
+      "Bash(claude --version)",
+      "Bash(./scripts/ralph/ralph.sh *)",
+      "Bash(bash /Users/ddj/Documents/00_code/05_Project/ralph_projects/scripts/validate.sh)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(mkdir *)",
+      "Bash(chmod +x *)",
+      "Bash(./scripts/new-project.sh test-app *)",
+      "Bash(./scripts/new-project.sh test-doc *)",
+      "Bash(./scripts/list-projects.sh *)",
+      "Bash(./scripts/remove-project.sh test-app *)",
+      "Bash(./scripts/remove-project.sh test-doc *)",
+      "Bash(gh repo *)",
+      "Bash(git push *)",
+      "Bash(cp /Users/ddj/Documents/00_code/05_Project/ralph_projects/scripts/ralph/ralph.sh ~/.claude/scripts/ralph/ralph.sh)",
+      "Bash(cp /Users/ddj/Documents/00_code/05_Project/ralph_projects/scripts/ralph/CLAUDE.md ~/.claude/scripts/ralph/CLAUDE.md)"
+    ]
+  }
+}
